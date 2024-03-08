@@ -1,0 +1,162 @@
+{
+    "perguntas": [
+        {
+            "pergunta": "1. Nos últimos 2 anos, com qual frequência você aplicou/investiu em produtos financeiros?:",
+            "tipo": 1,
+            "respostas" : [
+                { "resposta": "Raramente (até 12 aplicações/operações)" },
+                { "resposta": "Eventualmente (entre 12 a 48 aplicações/operações)" },
+                { "resposta": "Algumas vezes (entre 48 a 96 aplicações/operações)" },
+                { "resposta": "Frequentemente (mais de 96 aplicações/operações))" }
+            ],
+            "pesos" :[
+                { "peso": 2 },
+                { "peso": 4 },
+                { "peso": 6 },
+                { "peso": 8 }
+            ]
+        },
+        {
+            "pergunta": "2. Qual o volume investido em produtos financeiros nos últimos 2 anos?:",
+            "tipo": 1,
+            "respostas" : [
+                { "resposta": "Até R$ 100 mil" },
+                { "resposta": "Entre R$ 100 e R$ 500 mil" },
+                { "resposta": "Entre R$ 500 mil e R$ 1 milhão" },
+                { "resposta": "Acima de R$ 1 milhão" }
+            ],
+            "pesos" :[
+                { "peso": 2 },
+                { "peso": 4 },
+                { "peso": 8 },
+                { "peso": 10 }
+            ]
+        },
+        {
+            "pergunta": "3. Qual o principal objetivo dos seus investimentos?:",
+            "tipo": 1,
+            "respostas" : [
+                { "resposta": "Produzir ganhos consideráveis acima da taxa de juros de mercado (CDI)" },
+                { "resposta": "Produzir ganhos ligeiramente acima do CDI" },
+                { "resposta": "Produzir retorno próximo do CDI" },
+                { "resposta": "Preservar o valor investido" }
+            ],
+            "pesos" :[
+                { "peso": 8 },
+                { "peso": 6 },
+                { "peso": 4 },
+                { "peso": 2 }
+            ]
+        },
+        {
+            "pergunta": "4. Por quanto tempo pretende deixar o seu dinheiro investido?:",
+            "tipo": 1,
+            "respostas" : [
+                { "resposta": "Menos de 1 ano, podendo resgatar a qualquer tempo" },
+                { "resposta": "De 1 a 3 anos" },
+                { "resposta": "De 3 a 7 anos" },
+                { "resposta": "Mais de 7 anos" }
+            ],
+            "pesos" :[
+                { "peso": 2 },
+                { "peso": 4 },
+                { "peso": 8 },
+                { "peso": 10 }
+            ]
+        },
+        {
+            "pergunta": "5. Você aumentaria o risco da sua carteira para ter a possibilidade de ampliar o retorno de seus investimentos?:",
+            "tipo": 2,
+            "respostas" : [
+                { "resposta": "Aumentaria significativamente o risco de carteira e tolero um alto nível de perda para buscar melhores rendimentos" },
+                { "resposta": "Aumentaria moderadamente o risco da carteira e tolero certo nível de perda para buscar melhores rendimentos" },
+                { "resposta": "Aumentaria levemente o risco da carteira e tolero um nível mínimo de perda para buscar melhores rendimentos" },
+                { "resposta": "Aumentaria minimamente o risco da carteira, pois me sinto pouco confortável com a possibilidade de perder parte dos recursos para buscar melhores rendimentos" }
+            ],
+            "pesos" :[
+                { "peso": 10 },
+                { "peso": 6 },
+                { "peso": 4 },
+                { "peso": 2 }
+            ]
+        },
+        {
+            "pergunta": "6. Como você classificaria sua experiência no mercado financeiro?:",
+            "tipo": 2,
+            "respostas" : [
+                { "resposta": "Não conheço ou conheço pouco as regras do mercado financeiro e preciso de toda orientação possível" },
+                { "resposta": "Tenho alguma experiência com regras do mercado financeiro, porém necessito de orientação profissional" },
+                { "resposta": "Domino totalmente o mercado financeiro e tomo minhas próprias decisões" },
+                { "resposta": "Possuo certa experiência profissional que me permite tomar decisões no mercado financeiro" }
+            ],
+            "pesos" :[
+                { "peso": 2 },
+                { "peso": 4 },
+                { "peso": 6 },
+                { "peso": 8 }
+            ]
+        },
+        {
+            "pergunta": "7. Quais produtos financeiros você investiu nos últimos 2 anos ou possui familiaridade?:",
+            "tipo": 2,
+            "respostas" : [
+                { "resposta": "Somente Poupança, Fundos de Renda Fixa ou Depósito a Prazo (CDBs, LCIs, LCAs)" },
+                { "resposta": "Além dos produtos acima, títulos de Renda Fixa (públicos ou privados), Fundos Multimercados ou Renda Variável" },
+                { "resposta": "Além das alternativas anteriores, moedas, derivativos ou produtos complexos" },
+                { "resposta": "Não investi ou não tenho conhecimento sobre produtos financeiros" }
+            ],
+            "pesos" :[
+                { "peso": 4 },
+                { "peso": 6 },
+                { "peso": 10 },
+                { "peso": 2 }
+            ]
+        },
+        {
+            "pergunta": "8. Quais são seus planos para o futuro dos seus investimentos?:",
+            "tipo": 2,
+            "respostas" : [
+                { "resposta": "Não planejo resgatar meus investimentos nesse momento" },
+                { "resposta": "Não penso em resgatar meus investimentos por enquanto e pretendo realizar novas aplicações no curto prazo" },
+                { "resposta": "Posso precisar de uma parte para pagar despesas no curto prazo" },
+                { "resposta": "Conto com esses investimentos para completar minha renda" }
+            ],
+            "pesos" :[
+                { "peso": 8 },
+                { "peso": 6 },
+                { "peso": 4 },
+                { "peso": 2 }
+            ]
+        },
+        {
+            "pergunta": "9. Como está distribuído o seu patrimônio?",
+            "tipo": 2,
+            "respostas" : [
+                { "resposta": "Meu patrimônio não está aplicado ou está todo aplicado em renda fixa e/ou imóveis" },
+                { "resposta": "Menos de 25% em renda variável e o restante em renda fixa e/ou imóveis" },
+                { "resposta": "Entre 25% e 50% aplicado em renda variável e o restante em renda fixa e/ou imóveis" },
+                { "resposta": "Acima de 50% em renda variável" }
+            ],
+            "pesos" :[
+                { "peso": 2 },
+                { "peso": 4 },
+                { "peso": 6 },
+                { "peso": 8 }
+            ]
+        },
+        {
+            "pergunta": "10. Caso as suas aplicações sofressem uma queda superior a 30%, o que você faria?",
+            "tipo": 1,
+            "respostas" : [
+                { "resposta": "Resgataria toda a aplicação e aplicaria na poupança" },
+                { "resposta": "Manteria aplicação aguardando uma melhora do mercado" },
+                { "resposta": "Aumentaria a aplicação para aproveitar as oportunidades do mercado" }
+            ],
+            "pesos" :[
+                { "peso": 2 },
+                { "peso": 4 },
+                { "peso": 10 }
+            ]
+        }
+    ]
+}

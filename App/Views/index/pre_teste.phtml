@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/css/teste.css">
+<script src="js/pre_teste.js"></script>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="navegacao"><!--Barra de navegação-->
+      <div class="container">
+        <nav class="navbar navbar-expand-sm">
+          <a href="/">
+            <div class="logo" style="width: 130px; height: 130px;"> <!--Logo-->
+              <img src="img/logo2.png" class="image img-fluid pl-2 mt-2 mr-2">
+            </div>
+          </a>
+        </nav>
+      </div>
+    </div><!--Fim Barra de navegação-->
+    <section id="preTeste" style="margin-top: 50px;">
+      <div class="container">
+        <h4>Responda as perguntas abaixo para concluir seu registro.</h4>
+        <form id="formTeste" method="post">
+          <div class="row">
+            <div class="col-md-12">
+              <span id="pergunta" class="textPreTest">Loading ...</span>
+              <div id="perguntaForm" class="form-group">
+                <select class="form-control" id="resposta">
+                    <option value="">-- Selecione --</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <div class="row" id="resgistroBtns">
+                  <div class="col-md-12">
+                    <button type="button" class="btn btn-custom teste_btn" id="proximo"></button>
+                  </div>
+                </div>
+              </div>
+              <input name="soma" id=somaTotal type="hidden" value = 0>
+              <div class="progress fixed-bottom mb-3 mt-3">
+                <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated progressoBarra" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>

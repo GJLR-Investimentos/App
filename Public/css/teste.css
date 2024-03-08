@@ -1,0 +1,46 @@
+.textPreTest
+{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+#preTeste .form-control{
+    text-align: center;
+}
+#perguntaForm{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+#perguntaForm label{
+    display: block;
+}
+#perguntaForm span{
+    font-size: 20px;
+}
+#perguntaForm .form-control{
+    font-size: 1.2rem;
+    height: 50px;
+}
+.btn-custom{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: background 0.4s, color 0.4s;
+    padding: 10px 20px;
+}
+.teste_btn
+{
+    background: #2a475e;
+    text-transform: none;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    font-size: 1.2em;
+    height: 50px;
+    width: 150px;
+    margin: 5px auto;
+}
+.teste_btn:hover{
+    background: #1b2838;
+    font-size: 1.3em;
+}

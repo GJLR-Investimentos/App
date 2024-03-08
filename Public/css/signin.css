@@ -1,0 +1,86 @@
+h3{
+    font-size: 1.7em;
+    font-weight: bold;
+}
+a i{
+    margin: 5px;
+}
+.containerLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 16px;
+}
+.logoRegistro{
+    padding-bottom: 15px;
+    width: 300px;
+    height: 200px;
+}
+.box{
+    padding: 32px 42px 32px 42px ;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.logintext
+{
+    font-size: 1.1em;
+}
+.loginBox{
+    width: 442px;
+}
+input{
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+form{
+    height: 440px;
+}
+.form-control:focus {
+    border-color: #ced4da;
+    outline: none;
+    box-shadow: none;
+}
+.btn-custom{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: background 0.4s, color 0.4s;
+    padding: 10px 20px;
+}
+.btn-azul{
+    border: 2px solid #2a475e;
+    font-size: 1.1em;
+    background: white;
+}
+.btn-azul:hover{
+    background: #2a475e;
+    font-size: 1.2em;
+    color: white;
+}
+.login_btn{
+    font-size: 1.2em;
+    height: 50px;
+    background: #2a475e;
+    text-transform: none;
+    border-radius: 20px;
+    color: white;
+}
+.login_btn:hover{
+    font-size: 1.3em;
+}
+p{
+    font-size: 1.1em;   
+}
+@media screen and (max-width: 600px){
+    .logoRegistro{
+        display: none;
+    }
+    a.home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

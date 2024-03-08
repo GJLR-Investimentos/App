@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="/css/perfil.css">
+<div class="panel panel-default">
+  <div class="panel-body">
+    <?php include "header.php" ?>
+    <section class="mb-3"><!---->
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+          <div class="main main-raised">
+            <div class="profile-content">
+              <div class="container mt-3">
+                <div class="row">
+                  <div class="col-5"></div>
+                  <div class="col-4 profile">
+                    <!--
+                    <img class="imgProfile img-raised rounded-circle img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGCN8DVjEL2TPKejTtBFJPKiSGF9xfXGCkWA4ZvqTJEBUrBKSP9ejB-FdSUV62VPRC5fo&usqp=CAU" alt="">
+                    -->
+                    <img class="imgProfile img-raised rounded-circle img-fluid" src="img/user.png" alt="">
+                  </div>
+                  <div class="col-3"></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-5">
+                    <span>Nome Completo: </span>
+                    <div class="input-group form-group mb-0">
+                      <input name="nome" value="<?= $this->view->info_usuario['nome'] ?>" type="text" class="form-control" readonly/>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <span>Email: </span>
+                    <div class="input-group form-group mb-0">
+                      <input name="" value="<?= $this->view->info_usuario['email'] ?>" type="text" class="form-control" readonly/>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-5">
+                    <span>Investidor: </span>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="input-group form-group mb-0">
+                          <input name="" value="<?= $this->view->info_usuario['investidor'] ?>" type="text" class="form-control" readonly/>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <a href="/pre_teste"><button class="btn btn-azul">Refazer Teste</button></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <span>Telefone: </span>
+                    <div class="input-group form-group mb-0">
+                      <input name="" value="<?= $this->view->info_usuario['phone'] ?>" type="text" class="form-control" readonly/>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-5">
+                    <span>Renda Mensal total: </span>
+                    <div class="input-group form-group mb-0">
+                      <input name="" value="" type="text" class="form-control" readonly/>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <span>Renda fixa: </span>
+                    <div class="input-group form-group mb-0">
+                      <input name="" value="" type="text" class="form-control" readonly/>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-5">
+                    <span>Renda variavel: </span>
+                    <div class="input-group form-group mb-0">
+                      <input name="" value="" type="text" class="form-control" readonly/>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <span>Fundo de investimento: </span>
+                    <div class="input-group form-group mb-0">
+                      <input name="" value="" type="text" class="form-control" readonly/>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>  
+            </div>
+          </div> 
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </section><!--Fim-->
+    <?php include "footer.php" ?>
+  </div>
+</div>

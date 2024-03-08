@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="/css/finalRegistro.css">
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="navegacao"><!--Barra de navegação-->
+      <div class="container">
+        <nav class="navbar navbar-expand-sm">
+          <a href="/">
+            <div class="logo" style="width: 130px; height: 130px;"> <!--Logo-->
+              <img src="img/logo2.png" class="image img-fluid pl-2 mt-2 mr-2">
+            </div>
+          </a>
+        </nav>
+      </div>
+    </div><!--Fim Barra de navegação-->
+    <section class="finalCadastro" style="margin-top: 50px;">
+      <div class="container">
+        <div style="text-align: center;">
+          <h4 style="margin-bottom: 80px;">Cadastro concluido com sucesso!!!</h4>
+          <?php if(isset($_GET['investidor']) && $_GET['investidor'] == '1'){ ?>
+            <h1 class="mb-3">Investidor Conservador!</h1>
+            <p>Aumenta seus rendimentos com calma e com o máximo de previsão possível, 
+              mantendo a segurança, mas contém um retorno mais baixo (Risco: baixo).</p>
+          <?php }
+          else if(isset($_GET['investidor']) && $_GET['investidor'] == '2'){ ?>
+            <h1 class="mb-3">Investidor Moderado!</h1>
+            <p>Aceita correr pequenos riscos e calculados para um aumento
+               pequeno aumento de ganhos (Risco: Médio).</p>
+          <?php }
+          else if(isset($_GET['investidor']) && $_GET['investidor'] == '3'){ ?>
+            <h1 class="mb-3">Investidor Arrojado!</h1>
+            <p>Divisão do capital entre investimentos de alto potencial 
+              de retorno e segurança de renda fixa (Risco: Médio).</p>
+          <?php }
+          else{ ?>
+            <h1 class="mb-3">Investidor Agressivo!</h1>
+            <p>Resistencia a possíveis perdas de dinheiro visando um retorno 
+              agressivo sobre o investimento. (Risco: Alto).</p>
+          <?php } ?>
+          <div class="form-group">
+            <span class="circleCheck"><i class="fas fa-check-circle"></i></span>
+            <a href="/"><input type="submit" value="Pagina Inicial" class="btn btn-custom finaliza_btn mt-4"></a>
+          </div>
+        </div>
+        <div class="progress fixed-bottom mt-3 mb-3">
+          <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width: 100%;">100%</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,190 @@
+<link rel="stylesheet" href="/css/signup.css">
+<script>
+    function getDadosEnderecoPorCEP(cep){
+        console.log(cep)
+        let url = 'https://viacep.com.br/ws/'+ cep +'/json/'
+        console.log(url)
+        let xmlHttp = new XMLHttpRequest()
+        xmlHttp.open('GET',url)
+        xmlHttp.onreadystatechange = ()=>{
+            if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                let dadosJSONText = xmlHttp.responseText
+                let dadosJSONObj = JSON.parse(dadosJSONText)
+                document.getElementById('endereco').value = dadosJSONObj.logradouro
+                document.getElementById('bairro').value = dadosJSONObj.bairro
+                document.getElementById('cidade').value = dadosJSONObj.localidade
+                document.getElementById('uf').value = dadosJSONObj.uf
+            }
+        }
+        xmlHttp.send()
+    }
+</script>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="navegacao"><!--Barra de navegação-->
+      <div class="container">
+        <nav class="navbar navbar-expand-sm">
+          <a href="/">
+            <div class="logo" style="width: 130px; height: 130px;"> <!--Logo-->
+              <img src="img/logo2.png" class="image img-fluid pl-2 mt-2 mr-2">
+            </div>
+          </a>
+        </nav>
+      </div>
+    </div><!--Fim Barra de navegação-->
+    <section class="registro"><!--registro-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="/pre_teste" method="post">
+                        <h4>Cadastre-se para poder investir</h4>
+                        <?php if(isset($_GET['erro']) && $_GET['erro'] == '1'){ ?>
+                            <small style="color: red;">Verifique se tudo está preenchido corretamente!</small>
+                        <?php } ?>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Nome da mãe: *</span>
+                                <div class="input-group form-group mb-0">
+                                    <input name="mae" type="text" class="form-control" placeholder="" required/>
+                                </div>
+                                <?php if(isset($_GET['mae']) && $_GET['mae'] == 'erro'){ ?>
+                                    <small style="color: red;">Nome inválido!</small>
+                                <?php } ?>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Nome do pai:</span>
+                                <div class="input-group form-group mb-0">
+                                    <input name="pai" type="text" class="form-control" placeholder=""/>
+                                </div>
+                                <?php if(isset($_GET['pai']) && $_GET['pai'] == 'erro'){ ?>
+                                    <small style="color: red;">Nome inválido!</small>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-2">
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-6">
+                                        <span class="logintext">Você é um pessoa politicamente exposta?: *</span>
+                                        <br><input class="ml-5" type="radio" name="pl" value="1">
+                                        <label for="sim">Sim</label>
+                                        <input class="ml-2" type="radio" name="pl" value="2" required>
+                                        <label for="nao">Não</label><br>
+                                    </div>
+                                    <?php if(isset($_GET['pl']) && $_GET['pl'] == 'erro'){ ?>
+                                        <small style="color: red;">Seleção inválida!</small>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Bens Finananceiros: *</span>
+                                <div class="input-group form-group mb-0">
+                                    <input name="bens" type="text" class="form-control" placeholder="" required/>
+                                </div>
+                                <?php if(isset($_GET['bens']) && $_GET['bens'] == 'erro'){ ?>
+                                    <small style="color: red;">Valor inválido!</small>
+                                <?php } ?>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Renda Mensal: *</span>
+                                <div class="input-group form-group mb-0">
+                                    <input name="renda" type="text" class="form-control" placeholder="" required/>
+                                </div>
+                                <?php if(isset($_GET['renda']) && $_GET['renda'] == 'erro'){ ?>
+                                    <small style="color: red;">Valor inválido!</small>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">CEP: *</span>
+                                <div class="input-group form-group mb-0">
+                                    <input name="cep" type="text" class="form-control" onblur="getDadosEnderecoPorCEP(this.value)" placeholder="" required/>
+                                </div>
+                                <?php if(isset($_GET['cep']) && $_GET['cep'] == 'erro'){ ?>
+                                    <small style="color: red;">CEP inválido!</small>
+                                <?php } ?>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Bairro: *</span>
+                                <div class="input-group form-group mb-0">
+                                    <input id="bairro" name="bairro" type="text" class="form-control" placeholder="" required/>
+                                </div>
+                                <?php if(isset($_GET['bairro']) && $_GET['bairro'] == 'erro'){ ?>
+                                    <small style="color: red;">Bairro inválido!</small>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Estado: *</span>
+                                <div class="input-group form-group mb-0">
+                                    <input id="uf" name="estado" type="text" class="form-control" placeholder="" required/>
+                                </div>
+                                <?php if(isset($_GET['estado']) && $_GET['estado'] == 'erro'){ ?>
+                                    <small style="color: red;">Estado inválido!</small>
+                                <?php } ?>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Cidade: *</span>
+                                <div class="input-group form-group mb-0">
+                                    <input id="cidade" name="cidade" type="text" class="form-control" placeholder="" required/>
+                                </div>
+                                <?php if(isset($_GET['cidade']) && $_GET['cidade'] == 'erro'){ ?>
+                                    <small style="color: red;">Cidade inválida!</small>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 mb-2">
+                                <span class="logintext">Endereço: *</span>
+                                <div class="input-group form-group mb-0">
+                                    <input id="endereco" name="endereco" type="text" class="form-control" placeholder="" required/>
+                                </div>
+                                <?php if(isset($_GET['endereco']) && $_GET['endereco'] == 'erro'){ ?>
+                                    <small style="color: red;">Endereço inválido!</small>
+                                <?php } ?>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <span class="logintext">Complemento:</span>
+                                <div class="input-group form-group mb-0">
+                                    <input name="complemento" type="text" class="form-control" placeholder=""/>
+                                </div>
+                                <?php if(isset($_GET['complemento']) && $_GET['complemento'] == 'erro'){ ?>
+                                    <small style="color: red;">Complemento inválido!</small>
+                                <?php } ?>
+                            </div>
+                        </div>            
+                        <div class="form-group center">
+                            <a href="#"><input type="submit" value="Continuar" class="btn btn-custom register_btn mb-3"></a>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5 mt-5">
+                <div class="sobreRegistro">
+                <h5>A GJLR contêm diversas maneiras de investir !!! <i><img src="img/arrow-trend-up-solid.svg"></i></h5>
+                <ul>
+                    <li>
+                    <span>Investimento com base no seu perfil !</span>
+                    </li>
+                    <li>
+                    <span>Investimento rápido e fácil de se aprender !</span>
+                    </li>
+                    <li>
+                    <span>Receba parte da taxa dos fundos administrativos em sua conta !</span>
+                    </li>
+                </ul>
+                </div>
+                <div class="registroImg">
+                <img src="img/hand.png" class="img-fluid">
+            </div>
+        </div>
+      </div>
+    </section><!--Fim registro-->
+  </div>
+</div>

@@ -1,0 +1,125 @@
+section{
+    background-color: #ebedef;
+}
+i{
+    size: 10px;
+}
+.fas.fa-eye{
+    border: none;
+}
+table{
+    width: 100%;
+    background-color: #fff;
+}
+.table-bordered td, .table-bordered th, #tabelaAtivos td{
+    min-width: 20px;
+    border: 1px solid #2a475e;
+    text-align: center;
+    font-weight: 600;
+    vertical-align: middle;
+}
+table tr td:last-child, table tr th:last-child, #tabelaAtivos td:last-child{
+    padding: 10px;
+    margin: auto;
+    border: none;
+    background-color: #ebedef;
+}
+.perfil{
+    background-color: white;
+    border: 1px solid #2a475e;
+    border-radius: 10px;
+}
+.imgProfile{
+    display: block;
+    height: 90px;
+    width: 90px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tipos{
+    width: 200px;
+}
+#topoTabela{
+    width: 100%;
+    display: flex;
+}
+#topoTabela button{
+    margin-top: auto;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+.containerDraw{
+    display: flex;
+    height: 100%;
+    margin-top: auto;
+}
+#DrawChart, #myChart {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#drawActive{
+    border: 1px solid #2a475e;
+}
+#toolbar{
+    margin-top: 10px;
+    display: flex;
+    margin: 5px;
+}
+#toolbar label{
+    font-size: 12px;
+    margin: 5px;
+}
+#toolbar input{
+    width: 100%;
+}
+#toolbar button#clear{
+   background-color: #1565c0;
+   border-radius: 4px;
+   color: white;
+   padding: 2px;
+}
+.btn-tabela{
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border-radius: 100px;
+    border: 2px solid #2a475e;
+    background: white;
+}
+.btn-tabela:hover{
+    background: #2a475e;
+    color: white;
+}
+#anterior:disabled, #proximo:disabled{
+    cursor: not-allowed;
+}
+@media (max-width: 767.98px){
+    #nav-principal{
+        margin-top: -80px;
+        position: relative;
+        z-index: 4;
+        text-align: center;
+        border: 5px solid #2a475e;
+        border-radius: 10px;
+        background: #fff;
+        padding-bottom: 5px;
+    }
+    table{
+        width: 100%;
+    }
+    tr{
+        display: inline-block;
+    }
+    .table-bordered td, .table-bordered th{
+        display: flex;
+        min-width: 5px;
+        border: 1px solid #2a475e;
+        text-align: center;
+        vertical-align: center;
+        
+    }
+}
+@media (max-width: 991.98px){
+}

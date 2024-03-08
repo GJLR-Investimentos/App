@@ -1,0 +1,106 @@
+<script src="js/cookies.js"></script>
+<link rel="stylesheet" href="/css/investir.css">
+<div class="panel panel-default">
+  <div class="panel-body">
+  <?php include "header.php" ?>
+    <section id="investimentos" class="d-flex pb-3 mt-3"><!---->
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-md-2 mt-3">
+            <div class="perfil mt-3">
+              <img class="imgProfile" src="img/user.png" alt="">
+              <h5 class="mt-3" style="text-align: center"><?= $this->view->info_usuario['nome'] ?></h5>
+              <p style="text-align: center"><?= $this->view->info_usuario['investidor'] ?></p>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div id="topoTabela">
+              <div class="" style="margin-top: 50px;" id="tipos">
+                <select class="form-control" id="tipo">
+                  <option value="Oleo e Gas">Óleo e Gás</option>
+                  <option value="Siderurgia e Mineracao">Siderurgia e Mineração</option>
+                  <option value="Bancos">Bancos</option>
+                  <option value="Financeiros Nao-Bancos">Financeiros Não-Bancos</option>
+                  <option value="Alimentos e Bebidas">Alimentos e Bebidas</option>
+                  <option value="Energia Eletrica">Energia Elétrica</option>
+                  <option value="Varejo">Varejo</option>
+                  <option value="Alimentos e Bebidas">Alimentos e Bebidas</option>
+                  <option value="Transportes">Transportes</option>
+                  <option value="Saneamento Basico">Saneamento Básico</option>
+                  <option value="Educacao e Saude">Educação e Saúde</option>
+                  <option value="Telecom">Telecom</option>
+                  <option value="Industria">Industria</option>
+                  <option value="Sucroalcooleiro">Sucroalcooleiro</option>
+                </select>
+              </div>
+              <div class="containerDraw">
+                <div id="toolbar">
+                  <label for="stroke">Cor</label>
+                  <input id="stroke" name="stroke" type="color">
+                  <label for="lineWidth">Espesura</label>
+                  <input id="lineWidth" name="lineWidth" type="number">
+                  <button class="btn" id="clear">Limpar</button>
+                  <div id="tipoInvestidor" style="display: none"><?= $this->view->info_usuario['investidor'] ?></div>   
+                </div>
+                <button class="btn" onclick="drawMode()" id="drawActive">Ativar desenho</button>
+              </div>
+              <script>
+                function drawMode() {
+                  var div = document.getElementById("drawActive");
+                  var ch = document.getElementById("DrawChart");
+                  console.log(div.style.display)
+                  if(ch.style.display == "none"){
+                    div.innerHTML = "Desativar desenho";
+                    ch.style.display = "block"
+                  }
+                  else{
+                    div.innerHTML = "Ativar desenho";
+                    ch.style.display = "none"
+                  }
+                }
+              </script>
+              <!--
+              <button class="btn">
+                <i class="fas fa-cog"></i>
+              </button>
+              -->
+            </div>
+            <div class="table-responsive mt-3">
+              <table class="table-bordered mt-3" id="tabelaAtivos"></table>
+              <div class="mt-3" id="paginacao">
+                <button class="btn btn-tabela" id="anterior">Anterior</button>
+                <button class="btn btn-tabela" id="proximo">Próximo</button>
+                <p class="mt-1" style="margin-left: 40px;">Pagina <label id="numpagina">1</label></p>
+              </div>
+            </div>
+            <script src="js/investirIni.js"></script>
+          </div>
+        </div>
+        <div class="mt-3 drawing-board" style="position: relative; height:60vh">
+          <canvas id="myChart"></canvas>
+          <canvas id="DrawChart" style="display: none"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script > 
+          var ctx1 = document.getElementById('DrawChart').getContext('2d');
+          var chart1 = new Chart(ctx1, {
+          });
+        </script>
+        <script>
+          function resizeChart() {
+            if (myChart) {
+              if (myChart.options.scales.yAxes && myChart.options.scales.yAxes.length > 0) {
+                var fontSize = (window.innerWidth < 600) ? 10 : 14;
+                myChart.options.scales.yAxes[0].ticks.fontSize = fontSize;
+                myChart.update();
+              }
+            }
+          }
+          window.addEventListener('resize', resizeChart);
+        </script>
+        <script src="js/drawChart.js"></script>
+      </div>
+    </section><!--Fim-->
+    <?php include "footer.php" ?>
+  </div>
+</div>

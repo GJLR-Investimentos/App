@@ -1,0 +1,35 @@
+h4{
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.circleCheck .fas{
+    font-size: 200px;
+    color: green;
+    margin-bottom: 20px;
+}
+.btn-custom{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: background 0.4s, color 0.4s;
+    padding: 10px 20px;
+}
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.finaliza_btn{
+    background: #2a475e;
+    text-transform: none;
+    color: white;
+    font-size: 1.2em;
+    height: 50px;
+    width: 200px;
+}
+.finaliza_btn:hover{
+    background: #1b2838;
+}

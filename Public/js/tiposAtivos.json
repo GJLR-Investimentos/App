@@ -1,0 +1,98 @@
+{
+    "Oleo e Gas":[
+        { "nome": "UGPA3" },
+        { "nome": "PETR3" },
+        { "nome": "BRKM5" },
+        { "nome": "BRDT3" },
+        { "nome": "PETR4" }
+    ],
+    "Siderurgia e Mineracao":[
+        { "nome": "USIM3" },
+        { "nome": "CSNA3" },
+        { "nome": "GGBR4" },
+        { "nome": "USIM5" },
+        { "nome": "GOAU4" },
+        { "nome": "VALE3" }
+    ],
+    "Bancos":[
+        { "nome": "ITUB4" },
+        { "nome": "ABCB4" },
+        { "nome": "SANB11" },
+        { "nome": "BBAS3" },
+        { "nome": "ITSA4" },
+        { "nome": "BBDC4" },
+        { "nome": "BBDC3" }
+    ],
+    "Financeiros Nao-Bancos":[
+        { "nome": "CIEL3" },
+        { "nome": "IRBR3" },
+        { "nome": "BBSE3" },
+        { "nome": "B3SA3" }
+    ],
+    "Alimentos e Bebidas":[
+        { "nome": "ABEV3" },
+        { "nome": "JBSS3" },
+        { "nome": "BRFS3" },
+        { "nome": "BEEF3" },
+        { "nome": "MRFG3" },
+        { "nome": "MDIA3" }
+    ],
+    "Energia Eletrica":[
+        { "nome": "LIGT3" },
+        { "nome": "ALUP11" },
+        { "nome": "EQTL3" },
+        { "nome": "CLSC4" },
+        { "nome": "ELET3" },
+        { "nome": "ENGI11" },
+        { "nome": "EGIE3" },
+        { "nome": "TAEE11" },
+        { "nome": "CPFE3" },
+        { "nome": "RNEW11" },
+        { "nome": "ENEV3" },
+        { "nome": "TRPL4" },
+        { "nome": "ELET6" },
+        { "nome": "ENBR3" },
+        { "nome": "CMIG4" }
+    ],
+    "Varejo":[
+        { "nome": "AMAR3" },
+        { "nome": "ALPA4" },
+        { "nome": "LREN3" },
+        { "nome": "CVCB3" },
+        { "nome": "RADL3" },
+        { "nome": "VULC3" },
+        { "nome": "MGLU3" }
+    ],
+    "Transportes":[
+        { "nome": "ECOR3" },
+        { "nome": "JSLG3" },
+        { "nome": "MOVI3" },
+        { "nome": "RENT3" },
+        { "nome": "RAIL3" },
+        { "nome": "GOLL4" },
+        { "nome": "EMBR3" }
+    ],
+    "Saneamento Basico":[
+        { "nome": "SBSP3" },
+        { "nome": "SAPR11" },
+        { "nome": "CSMG3" }
+    ],
+    "Educacao e Saude":[
+        { "nome": "QUAL3" },
+        { "nome": "HYPE3" },
+        { "nome": "SEER3" },
+        { "nome": "FLRY3" }
+    ],
+    "Telecom":[
+        { "nome": "OIBR3" }
+    ],
+    "Industria":[
+        { "nome": "RAPT4" },
+        { "nome": "MYPK3" },
+        { "nome": "WEGE3" }
+    ],
+    "Sucroalcooleiro":[
+        { "nome": "CSAN3" },
+        { "nome": "SMTO3" }
+    ]
+}

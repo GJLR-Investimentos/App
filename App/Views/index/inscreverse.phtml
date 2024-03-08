@@ -1,0 +1,169 @@
+<link rel="stylesheet" href="/css/signup.css">
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="navegacao"><!--Barra de navegação-->
+      <div class="container">
+        <nav class="navbar navbar-expand-sm">
+          <a href="/">
+            <div class="logo" style="width: 130px; height: 130px;"> <!--Logo-->
+              <img src="img/logo2.png" class="image img-fluid pl-2 mt-2 mr-2">
+            </div>
+          </a>
+        </nav>
+      </div>
+    </div><!--Fim Barra de navegação-->
+    <section class="registro"><!--registro-->
+        <div class="container">
+            <form id="formInscreverse" action="/inscreverse?page=2" method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Cadastre-se para poder investir</h4>
+                        <?php if(isset($_GET['erro']) && $_GET['erro'] == '1'){ ?>
+                            <small style="color: red;">Verifique se tudo está preenchido corretamente!</small>
+                        <?php } ?>
+                        <?php if(isset($_GET['erro']) && $_GET['erro'] == '2'){ ?>
+                            <small style="color: red;">Ocorreu um erro ao registrar o usuario!</small>
+                        <?php } ?>
+                        <div class="row">
+                            <div class="col-md-12 mb-2">
+                                <span class="logintext">Nome Completo:*</span>
+                                <div class="input-group form-group mb-0">
+                                    <input id="nome" name="nome" type="text" class="form-control" placeholder="Ex:Roberta Silva" required/>
+                                </div>
+                                <?php if(isset($_GET['nome']) && $_GET['nome'] == 'erro'){ ?>
+                                    <small style="color: red;">Nome inválido!</small>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Data de Nascimento:*</span>
+                                <div class="md-form md-outline input-with-post-icon datepicker mb-0">
+                                    <input id="data" name="data" style="text-align: center;" placeholder="Select date" type="date" class="form-control" required>
+                                </div>
+                                <?php if(isset($_GET['data']) && $_GET['data'] == 'erro'){ ?>
+                                    <small style="color: red;">Data inválida!</small>
+                                <?php } ?>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Gênero:</span>
+                                <div class="form-group mb-0">
+                                    <select style="text-align: center;" class="form-control" name="genero">
+                                        <option value="">-- Selecione --</option>
+                                        <option value="1">Homem</option>
+                                        <option value="2">Mulher</option>
+                                        <option value="3">Outro</option>
+                                    </select>
+                                </div>
+                                <?php if(isset($_GET['genero']) && $_GET['genero'] == 'erro'){ ?>
+                                    <small style="color: red;">Genero inválido!</small>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Telefone:*</span>
+                                <div class="input-group form-group mb-0">
+                                    <input id="phone" name="phone" type="text" class="form-control" placeholder="Ex:(99) 99999-9999" required>
+                                </div>
+                                <?php if(isset($_GET['phone']) && $_GET['phone'] == 'erro'){ ?>
+                                    <small style="color: red;">Telefone inválido!</small>
+                                <?php } ?>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Formação Acadêmica:</span>
+                                <div class="form-group mb-0">
+                                    <select style="text-align: center;" class="form-control" name="escolaridade">
+                                        <option value="">-- Selecione --</option>
+                                        <option value="1">Exatas</option>
+                                        <option value="2">Biomédicas e Humanas</option>
+                                        <option value="3">Nível Técnico</option>
+                                        <option value="4">Outros</option>
+                                        <option value="5">Não possuo</option>
+                                    </select>
+                                </div>
+                                <?php if(isset($_GET['fa']) && $_GET['fa'] == 'erro'){ ?>
+                                    <small style="color: red;">Formação inválida!</small>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-2">
+                                <span class="logintext">CPF:*</span>
+                                <div class="input-group form-group mb-0">
+                                    <input id="cpf" name="cpf" type="text" class="form-control" placeholder="Ex:999.999.999-99" required>
+                                </div>
+                                <?php if(isset($_GET['cpf']) && $_GET['cpf'] == 'erro'){ ?>
+                                    <small style="color: red;">CPF inválido!</small>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-2">
+                                <span class="logintext">Email:*</span>
+                                <div class="input-group form-group mb-0">
+                                    <input id="email" name="email" type="email" class="form-control" placeholder="Ex:exemplo@exemplo.com" required>
+                                </div>
+                                <?php if(isset($_GET['email']) && $_GET['email'] == 'erro'){ ?>
+                                    <small style="color: red;">Email inválido!</small>
+                                <?php } ?>
+                                <?php if(isset($_GET['email']) && $_GET['email'] == 'erro2'){ ?>
+                                    <small style="color: red;">Email já cadastrado!</small>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Senha:*</span>
+                                <div class="input-group form-group mb-0">
+                                    <input id="senha" name="senha" type="password" class="form-control" placeholder="Ex:HZ6&4z64%*bT" required>
+                                </div>
+                                <?php if(isset($_GET['senha']) && $_GET['senha'] == 'erro'){ ?>
+                                    <small style="color: red;">
+                                        Senha deve conter ao menos 1 dígito, 1 letra Maiscula, 1 letra Minuscula,
+                                        1 caracter especial e 8 caracteres!
+                                    </small>
+                                <?php } ?>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <span class="logintext">Repetir Senha:*</span>
+                                <div class="input-group form-group mb-0">
+                                    <input id="senha2" name="senha2" type="password" class="form-control" placeholder="Senha Forte!" required>
+                                </div>
+                                <?php if(isset($_GET['senha2']) && $_GET['senha2'] == 'erro'){ ?>
+                                    <small style="color: red;">Senhas diferentes!</small>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="form-group center">
+                            <a href="#"><input type="submit" value="Continuar" class="btn btn-custom register_btn mb-3"></a>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 mt-5">
+                    <div class="sobreRegistro">
+                    <h5>A GJLR contêm diversas maneiras de investir !!! <i><img src="img/arrow-trend-up-solid.svg"></i></h5>
+                    <ul>
+                        <li>
+                        <span>Investimento com base no seu perfil !</span>
+                        </li>
+                        <li>
+                        <span>Investimento rápido e fácil de se aprender !</span>
+                        </li>
+                        <li>
+                        <span>Receba parte da taxa dos fundos administrativos em sua conta !</span>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="registroImg">
+                    <img src="img/hand.png" class="img-fluid">
+                    </div>
+                </div>
+            </form>
+        </div>
+      </div>
+    </section><!--Fim registro-->
+    <script src="js/inscreverse.js"></script>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+.sobreRegistro{
+    background-color: #2a475e;
+    padding: 40px 40px 1px 40px;
+    color: white;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+.sobreRegistro li{
+    padding-top: 25px;
+    font-size: 16px;
+}
+.registroImg{
+    padding: 0;
+    padding-bottom: 15px;
+    background-color: #2a475e;
+    -webkit-border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
+}
+h5 i img{
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+h4{
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.btn-custom{
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: background 0.4s, color 0.4s;
+    padding: 10px 20px;
+}
+.register_btn
+{
+    background: #2a475e;
+    text-transform: none;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    font-size: 1em;
+    height: 40px;
+    width: 150px;
+    margin: 5px auto;
+    display: inline;
+}
+.center{
+    text-align: center;
+}
+.register_btn:hover
+{
+    background: #1b2838;
+}
+.form-control:focus {
+    border-color: #ced4da;
+    outline: none;
+    box-shadow: none;
+}
+.errado.form-control{
+    border: 1px solid red;
+}
